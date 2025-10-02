@@ -1,0 +1,65 @@
+[
+    {
+        "merge_method": "셀 합산",
+        "sheet_name": "갑지_협력사 전체 정산 확인용",
+        "data_range": "D25:P25",
+        "key_column": "",
+        "index_column": ""
+    },
+    {
+        "merge_method": "셀 합산",
+        "sheet_name": "갑지_협력사 전체 정산 확인용",
+        "data_range": "B31:D31",
+        "key_column": "",
+        "index_column": ""
+    },
+    {
+        "merge_method": "키 기반",
+        "sheet_name": "을지_협력사 소속 라이더 정산 확인용",
+        "data_range": "B20:Z35",
+        "key_column": "B",
+        "index_column": "A"
+    },
+    {
+        "merge_method": "행 누적",
+        "sheet_name": "관리비",
+        "data_range": "B15:O15",
+        "key_column": "",
+        "index_column": ""
+    },
+    {
+        "merge_method": "행 누적",
+        "sheet_name": "추가배달료",
+        "data_range": "B11:F20",
+        "key_column": "",
+        "index_column": ""
+    },
+    {
+        "merge_method": "행 누적",
+        "sheet_name": "프로모션",
+        "data_range": "B11:E30",
+        "key_column": "",
+        "index_column": ""
+    },
+    {
+        "merge_method": "행 누적",
+        "sheet_name": "고용보험소급정산",
+        "data_range": "A15:Y40",
+        "key_column": "",
+        "index_column": ""
+    },
+    {
+        "merge_method": "최소값 선택",
+        "sheet_name": "갑지_협력사 전체 정산 확인용",
+        "data_range": "B25",
+        "key_column": "",
+        "index_column": ""
+    },
+    {
+        "merge_method": "최대값 선택",
+        "sheet_name": "갑지_협력사 전체 정산 확인용",
+        "data_range": "C25",
+        "key_column": "",
+        "index_column": ""
+    }
+]

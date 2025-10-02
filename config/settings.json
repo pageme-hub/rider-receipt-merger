@@ -1,0 +1,7 @@
+{
+    "merge_method": "키 기반",
+    "sheet_name": "을지_협력사 소속 라이더 정산 확인용",
+    "data_range": "B20:Z50",
+    "key_column": "B",
+    "index_column": "A"
+}
