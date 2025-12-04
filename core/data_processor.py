@@ -146,7 +146,9 @@ def extract_range_data(sheet: openpyxl.worksheet.worksheet.Worksheet,
         for col in range(start_col + 1, end_col + 2):
             cell_value = sheet.cell(row=row, column=col).value
             row_data.append(cell_value)
-        data.append(row_data)
+        # 빈 행(모든 셀이 None인 행)은 제외
+        if any(cell is not None for cell in row_data):
+            data.append(row_data)
     
     return data
 
@@ -154,15 +156,21 @@ def group_and_sum_by_key(data1: List[List], data2: List[List],
                           key_col_index: int) -> List[List]:
     result_dict = {}
 
-    # data1을 딕셔너리에 저장
+    # data1을 딕셔너리에 저장 (키가 None이거나 빈 값인 행은 제외)
     for row in data1:
         key = row[key_col_index]
+        # 키가 None이거나 빈 문자열이면 건너뛰기
+        if key is None or (isinstance(key, str) and key.strip() == ""):
+            continue
         if key not in result_dict:
             result_dict[key] = list(row)
     
-    # data2를 순회하며 키 체크
+    # data2를 순회하며 키 체크 (키가 None이거나 빈 값인 행은 제외)
     for row in data2:
         key = row[key_col_index]
+        # 키가 None이거나 빈 문자열이면 건너뛰기
+        if key is None or (isinstance(key, str) and key.strip() == ""):
+            continue
         if key in result_dict:
             for i in range(len(row)):
                 if i == key_col_index:
